@@ -1,0 +1,148 @@
+.container {
+    height : 100%;
+    font-size: 0;
+}
+
+
+@media screen and (min-width: 768px) {
+    .inner {
+        width: 500px;
+        margin: 0 auto;
+    }
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+
+.content {
+    flex: 1 1 auto;
+}
+
+.logo-charming {
+    background-image: url('../images/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex: none;
+    padding: 25px 115px 25px 20px;
+    margin: 10px;
+    caret-color: transparent;
+
+}
+
+
+.logo-charming , .link::before {
+    height:30px;
+    width:135px;
+}
+.link::before {
+    position: absolute;
+    top:0;
+    left:0;
+    content: "";
+    display: inline-block; /* 요소를 인라인 블록 요소로 설정합니다. */
+}
+
+.form-section {
+    padding: 0 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .form-section {
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    }
+}
+
+.form-list {
+    border-radius: 6px;
+    border: 1px solid #c6c6c6;
+    margin-bottom: 10px;
+}
+
+.form-item::before {
+    position: absolute;
+    top: 3px;
+    left: 9px;
+    font-size:30px;
+    content: '';
+}
+
+.form-item::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+
+    pointer-events: none;
+    content: '';
+}
+
+.form-list :last-child {
+    border-bottom: 0;
+}
+
+.input {
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    width: 100%;
+    font-size:16px;
+    line-height:22px;
+    color: #222;
+    border: 0;
+}
+input:focus {
+    outline: none; /* 테두리 제거 */
+}
+
+.form-item {
+    display:flex;
+    align-items: center;
+    position:relative;
+    box-sizing:border-box;
+    max-width:100%;
+    min-height:50px;
+    padding:0 10px 0 45px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+
+.user::before {
+        font-family: 'Material Icons'; /* 아이콘 폰트 설정 */
+        content: 'person'; /* 원하는 아이콘의 이름 */
+}
+.password::before {
+        font-family: 'Material Icons'; /* 아이콘 폰트 설정 */
+        content: 'lock'; /* 원하는 아이콘의 이름 */
+}
+.email::before {
+        font-family: 'Material Icons'; /* 아이콘 폰트 설정 */
+        content: 'mail'; /* 원하는 아이콘의 이름 */
+}
+.calendar::before {
+        font-family: 'Material Icons'; /* 아이콘 폰트 설정 */
+        content: 'calendar_month'; /* 원하는 아이콘의 이름 */
+}
+.phone::before {
+        font-family: 'Material Icons'; /* 아이콘 폰트 설정 */
+        content: 'call'; /* 원하는 아이콘의 이름 */
+}
+
+.btn_submit {
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,.05);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #fff;
+}
+

@@ -1,0 +1,247 @@
+.btn:active , .btn:active > svg > path , #btn:active {
+  /* :active 상태에서 아무런 스타일도 적용하지 않음 */
+  background: #000 !important;
+  color: #fff !important;
+  fill: #fff !important;
+  /* 다양한 스타일 속성 초기화 가능 */
+}
+
+.container {
+    height : 100%;
+    font-size: 0;
+}
+
+
+@media screen and (min-width: 768px) {
+    .inner {
+        width: 500px;
+        margin: 0 auto;
+    }
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+
+.content {
+    flex: 1 1 auto;
+}
+
+.logo-charming {
+    background-image: url('../../images/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex: none;
+    padding: 25px 115px 25px 20px;
+    margin: 10px;
+    caret-color: transparent;
+
+}
+
+
+.logo-charming , .link::before {
+    height:30px;
+    width:135px;
+}
+.link::before {
+    position: absolute;
+    top:0;
+    left:0;
+    content: "";
+    display: inline-block; /* 요소를 인라인 블록 요소로 설정합니다. */
+}
+
+.form-section {
+    padding: 0 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .form-section {
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    }
+}
+
+.form-list {
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.form-item::before {
+    position: absolute;
+    top: 3px;
+    left: 9px;
+    font-size:30px;
+    content: '';
+}
+
+.form-item::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+
+    pointer-events: none;
+    content: '';
+}
+
+
+.input {
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    width: 100%;
+    font-size:16px;
+    line-height:22px;
+    color: #222;
+    border: 0;
+}
+input:focus {
+    outline: none; /* 테두리 제거 */
+}
+
+.form-item {
+    display:flex;
+    align-items: center;
+    position:relative;
+    box-sizing:border-box;
+    max-width:100%;
+    min-height:50px;
+    margin : 0 auto;
+}
+
+
+.user::before {
+        font-family: 'Material Icons'; /* 아이콘 폰트 설정 */
+        content: 'person'; /* 원하는 아이콘의 이름 */
+}
+.password::before {
+        font-family: 'Material Icons'; /* 아이콘 폰트 설정 */
+        content: 'lock'; /* 원하는 아이콘의 이름 */
+}
+.email::before {
+        font-family: 'Material Icons'; /* 아이콘 폰트 설정 */
+        content: 'mail'; /* 원하는 아이콘의 이름 */
+}
+.calendar::before {
+        font-family: 'Material Icons'; /* 아이콘 폰트 설정 */
+        content: 'calendar_month'; /* 원하는 아이콘의 이름 */
+}
+.phone::before {
+        font-family: 'Material Icons'; /* 아이콘 폰트 설정 */
+        content: 'call'; /* 원하는 아이콘의 이름 */
+}
+
+.btn_submit {
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,.05);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #fff;
+}
+
+.kakao-login{
+    background: #ffde00;
+    color: #3c1e1e;
+}
+.kakao-login:hover{
+    background: #fbda00;
+    color: #3c1e1e;
+}
+
+.naver-login{
+    background:#00c73c;
+    color:#fff;
+}
+.naver-login:hover{
+    background: #00c13a;
+    color:#fff;
+}
+
+.apple-login{
+    background: #000;
+    color: #fff;
+}
+.apple-login:hover{
+    background: #333;
+    color: #fff;
+}
+
+.facebook-login{
+    background: #1877f2;
+    color: #fff;
+}
+.facebook-login:hover{
+    background: #116edb;
+    color: #fff;
+}
+
+.google-login{
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.16);
+    color: #0000008f;
+}
+.google-login:hover{
+    background: #f5f5f5;
+    border: 1px solid rgba(0,0,0,.16);
+    color: #0000008f;
+}
+
+.email-login{
+    background: #f2f8ff;
+    color: #1273e4;
+}
+.email-login:hover{
+    background: #e7f1fc;
+    color: #1273e4;
+}
+.business-login {
+    border: 1px solid #666;
+}
+
+.btn {
+    display :flex;
+    font-weight : bold;
+    width : 100%;
+}
+
+.login__title{
+    margin: 20px 20px;
+    height:22px;
+    text-align:center;
+    position:relative;
+}
+
+.login__title .caption {
+    position: absolute;
+    background-color: #fff;
+    color: #858585;
+    padding: 0 8px;
+    z-index: 1;
+    left : 50%;
+    transform:translateX(-50%);
+}
+
+.login__title .caption {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.login__title .strikethrough {
+    background-color: #ebebeb;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 100%;
+}
+

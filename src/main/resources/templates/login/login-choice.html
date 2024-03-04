@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/join/join-choice.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="inner">
+        <h1 class="logo-charming">
+            <a href="/" class="link"></a>
+        </h1>
+        <div class="login__title" >
+            <span class="strikethrough" ></span>
+            <span class="caption" >로그인/회원가입</span>
+        </div>
+        <div class="content">
+            <form id="join-choice-form" method="post" class="form">
+                <div class="form-content">
+                    <div class="form-section">
+                        <div class="form-list">
+                            <button type="button" id="kakao-login" class="btn kakao-login" onclick="loginWithKakao()">
+                                <div class="form-item" id="divKakao">
+                                    <svg width="21" height="21" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="current" d="M10.5 3.217c4.514 0 8 2.708 8 6.004 0 3.758-4.045 6.184-8 5.892-1.321-.093-1.707-.17-2.101-.23-1.425.814-2.728 2.344-3.232 2.334-.325-.19.811-2.896.533-3.114-.347-.244-3.157-1.329-3.2-4.958 0-3.199 3.486-5.928 8-5.928Z">
+                                        </path>
+                                    </svg>
+                                    카카오로 시작하기
+                                </div>
+                            </button>
+                        </div>
+                        <div class="form-list">
+                            <button type="submit" class="btn naver-login" >
+                                <div class="form-item" id="divNaver">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none"><path fill="#fff" d="M4 16.717h4.377V9.98l4.203 6.737H17v-13h-4.377v6.737l-4.16-6.737H4v13Z"></path></svg>
+                                    네이버로 시작하기
+                                </div>
+                            </button>
+                        </div>
+                        <div class="form-list">
+                            <button type="submit" class="btn apple-login" >
+                                <div class="form-item" id="divApple">
+                                    <svg width="21" height="21" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#fff" fill-rule="evenodd" d="M12.941 3.83c-.543.656-1.466 1.148-2.194 1.148a1.18 1.18 0 0 1-.215-.02 1.542 1.542 0 0 1-.031-.298c0-.83.43-1.661.882-2.184.584-.687 1.569-1.19 2.369-1.22.02.092.03.205.03.318 0 .83-.348 1.65-.84 2.256ZM9.375 17.094c-.365.155-.711.301-1.181.301-1.005 0-1.713-.922-2.502-2.04C4.759 14.012 4 11.951 4 9.992c0-3.127 2.04-4.799 4.05-4.799.589 0 1.127.217 1.603.409.378.152.717.289 1.012.289.267 0 .594-.13.975-.28.528-.21 1.157-.459 1.865-.459.462 0 2.113.041 3.19 1.61l-.04.027c-.27.177-1.694 1.11-1.694 3.04 0 2.398 2.092 3.25 2.154 3.27-.01.051-.339 1.159-1.097 2.297-.687.984-1.416 1.979-2.513 1.979-.53 0-.871-.149-1.224-.302-.376-.164-.765-.334-1.41-.334-.655 0-1.087.183-1.496.355Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    Apple로 시작하기
+                                </div>
+                            </button>
+                        </div>
+                        <div class="form-list">
+                            <button type="submit" class="btn facebook-login" >
+                                <div class="form-item" id="btn facebook-login">
+                                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" style="fill :white">
+                                        <path fill="current" d="M10.5 2.217c-4.418 0-8 3.603-8 8.047 0 4.017 2.925 7.346 6.75 7.95V12.59H7.219v-2.326H9.25V8.49c0-2.017 1.194-3.13 3.022-3.13.875 0 1.79.156 1.79.156v1.98h-1.008c-.994 0-1.304.621-1.304 1.257v1.51h2.219l-.355 2.326H11.75v5.623c3.825-.603 6.75-3.933 6.75-7.95 0-4.443-3.582-8.046-8-8.046Z"></path>
+                                    </svg>
+                                    페이스북으로 시작하기
+                                </div>
+                            </button>
+                        </div>
+                        <div class="form-list">
+                            <button type="submit" class="btn google-login" >
+                                <div class="form-item" id="btn google-login">
+                                    <svg width="21" height="21" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#4285F4" d="M18.18 10.398c0-.567-.05-1.113-.145-1.636H10.5v3.094h4.306a3.68 3.68 0 0 1-1.597 2.415v2.007h2.586c1.512-1.393 2.385-3.443 2.385-5.88Z"></path>
+                                        <path fill="#34A853" d="M10.5 18.216c2.16 0 3.97-.716 5.294-1.938l-2.585-2.007c-.717.48-1.633.763-2.71.763-2.083 0-3.847-1.407-4.476-3.298H3.351v2.073a7.997 7.997 0 0 0 7.149 4.407Z"></path>
+                                        <path fill="#FBBC05" d="M6.024 11.738c-.16-.48-.251-.993-.251-1.52 0-.528.09-1.04.25-1.52V6.625H3.352a7.997 7.997 0 0 0-.851 3.593c0 1.29.31 2.512.85 3.592l2.674-2.072Z"></path>
+                                        <path fill="#EA4335" d="M10.5 5.399c1.174 0 2.229.403 3.058 1.196L15.852 4.3c-1.385-1.29-3.196-2.083-5.352-2.083a7.997 7.997 0 0 0-7.15 4.407l2.673 2.073c.63-1.891 2.393-3.298 4.477-3.298Z"></path>
+                                    </svg>
+                                    구글로 시작하기
+                                </div>
+                            </button>
+                        </div>
+                        <div class="form-list">
+                            <button type="submit" class="btn email-login" >
+                                <div class="form-item" id="btn email-login">
+                                    <svg width="21" height="21" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#1273E4" fill-rule="evenodd" d="M10.99 9.441c.216-.112 2.65-1.483 7.303-4.11A2 2 0 0 0 16.5 4.216h-12a2 2 0 0 0-1.791 1.109l7.3 4.115c.293.163.652.171.981 0Zm7.51 4.776v-7.25c-4.05 2.279-6.29 3.537-6.72 3.776-.902.378-1.668.364-2.47.038-.32-.152-2.59-1.424-6.81-3.814v7.25a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    이메일로 시작하기
+                                </div>
+                            </button>
+                        </div>
+                        <div class="form-list">
+                            <button type="submit" class="btn business-login" >
+                                <div class="form-item" id="btn business-login">
+                                    비지니스 로그인/회원가입
+                                </div>
+                            </button>
+                        </div>
+                        <!--<div class="btn-submit-wrap" id="divBtnAuth">
+                            <button type="button" class="btn_submit btn-primary btn" id="btnSend">완료</button>
+                        </div>-->
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.6.0/kakao.min.js" integrity="sha384-6MFdIr0zOira1CHQkedUqJVql0YtcZA1P0nbPrQYJXVJZUkTk/oX4U9GhUIs3/z8" crossorigin="anonymous"></script>
+<script src="js/login/login-kakao.js"></script>
+
+</body>
+</html>

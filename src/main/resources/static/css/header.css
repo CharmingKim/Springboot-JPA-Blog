@@ -1,0 +1,56 @@
+.container {
+    height:80px;
+}
+
+.logo_area {
+    width:180px;
+}
+
+.menu_logo {
+    width:100%;
+}
+
+h5:hover {
+    color: #007BFF;
+    cursor: pointer;
+}
+
+.sub-menu {
+    position: absolute;
+    display: none;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background-color: #000;
+    z-index: 3;
+    padding: 0;
+}
+
+.sub-menu > li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.sub-menu > li > a {
+     color: #E1E1E1;
+     font-weight: bold;
+}
+
+.sub-menu > li > a:hover {
+     color: #FFF;
+}
+
+.sub-menu > li:not(:first-child) > a {
+     padding-left: 0;
+}
+
+.nav-item a {
+    font-weight: bold;
+}
+
+.nav-item:hover .sub-menu {
+    display: block;
+}
+
+
+
